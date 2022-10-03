@@ -32,7 +32,7 @@ const kafka = new Kafka({
     }
 })
 
-const topic = "topic_order_service"
+const topic = "order_service"
 
 const producer = kafka.producer({ createPartitioner: Partitioners.DefaultPartitioner })
 
