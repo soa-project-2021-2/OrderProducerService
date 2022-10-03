@@ -57,6 +57,11 @@ const Produce = async (message) => {
     }
 }
 
+app.get('/', async (req, res) => {
+    console.log("order_producer_service: get")
+    res.send({ resposta: "order_producer_service: get" });
+  });
+
 app.post('/', async (req, res) => {
     console.log(req.body)
     const resposta = await Produce(req.body)
